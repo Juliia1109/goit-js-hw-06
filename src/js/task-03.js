@@ -14,13 +14,14 @@ const images = [
 ];
 
 
-const listGalleryElement = document.querySelector('.gallery')
-console.log(listGalleryElement)
+const listEl = document.querySelector('.gallery')
+console.log(listEl)
+const makeAnImageGallery = ({ url, alt }) => {
+ return `<li class = "gallery__item"><img src="${url}" alt="${alt}" width="250" height="150" /></li>`
+  
+}
+// console.log(makeAnImageGallery)
+const imageGallery = images.map(el => makeAnImageGallery(el)).join('');
+console.log(imageGallery);
 
-const creatingAnImageGallery = images
-  .map((element) => 
-    `<li class ='list__item'><img src = '${element.url}' alt = '${element.alt}' width = '200' height = '150'/></li>`
-).join('\n')
-console.log(creatingAnImageGallery)
-
-listGalleryElement.insertAdjacentHTML('afterend', creatingAnImageGallery)
+listEl.insertAdjacentHTML(`afterbegin`, imageGallery);
