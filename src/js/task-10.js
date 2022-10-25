@@ -13,25 +13,30 @@ console.log(buttonDestroy)
 const input = document.querySelector('input')
 console.log(input)
 
+div1.addEventListener("click", createBoxes);
+
+
 function createBoxes(amount) {
-  // let event = getRandomHexColor()
+  let event = getRandomHexColor()
   const createElements = []
 for (let i = 0; i < amount; i++) {
    const divEl = document.createElement('div');
   // console.log(divEl)
-  divEl.style.width = '30px'
-  divEl.style.height = '30px'
-  divEl.style.backgroundColor = getRandomHexColor();
+  divEl.style.width = '30px' + '10px';
+  divEl.style.height = '30px' + '10px';
+  divEl.style.backgroundColor = event;
   createElements.push(divEl)
   
 }
- return createElements
+
+  div1.append(...createElements)
+   return createElements
 }
-const elements = createBoxes(div1)
-div1.append(...elements)
 
 
-// function destroyBoxes() {
+
+
+function destroyBoxes() {
 
   
-// }
+}

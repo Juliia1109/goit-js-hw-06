@@ -9,7 +9,7 @@ const ingredients = [
 
 
 const ingredientsEl = document.querySelector('#ingredients')
-console.log(ingredientsEl)
+
 
 
 const makeAnItemEl = (element) => {

@@ -1,6 +1,6 @@
 
 const form = document.querySelector('.login-form')
-// console.log(form)
+
 form.addEventListener('submit', (onFormSubmit) => {
     onFormSubmit.preventDefault();
 
@@ -16,7 +16,9 @@ form.addEventListener('submit', (onFormSubmit) => {
        
         return alert('У формі є незаповнені поля');
     } 
-    console.log(email.value, password.value);
+    console.log({'email': email.value, 'password': password.value})
+ ,
+
      document.querySelector('.login-form').reset();
 });
 
